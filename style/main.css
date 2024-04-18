@@ -1,0 +1,78 @@
+#landing {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../assets/pexels-anntarazevich-6560304.jpg");
+    background-size: cover;
+    background-position: 0,0;
+}
+
+.header {
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: inherit;
+    width: 100vw;
+    height: fit-content;
+    background-color: hsla(31, 85%, 77%, 0.7);
+    padding-bottom: 60px;
+}
+
+.logo {
+    background-image: url("../assets/e-vital-logo.png");
+    background-size: cover;
+    height: 360px;
+    width: 500px;
+}
+
+.hero-text {
+    margin: 0px 48px 0px 48px;
+    text-align: center;
+}
+
+.hero-text-2 {
+    margin-top: 16px;
+    font-size: 0.6rem;
+}
+
+.appointment-btn {
+    width: fit-content;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 24px;
+    background-color: #F6C592;
+    font-weight: 800;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px hsla(23, 68%, 16%, 0.4);
+}
+
+.nav-list {
+    display: none;
+}
+
+.bar {
+    width: 50px;
+    height: 2px;
+    background-color: #44220D;
+    margin: 10px;
+    box-shadow: 0px 0px 8px hsla(23, 68%, 16%, 0.7);
+}
+
+.toggle-button {
+    position: absolute;
+    right: 50px;
+    top: 30%;
+    z-index: 10;
+}

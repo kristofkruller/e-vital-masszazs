@@ -1,0 +1,38 @@
+:root {
+    --beige: #F6C592;
+    --brown: #44220D;
+    --black: #000000;
+    --mainFont: 'Quicksand', sans-serif;
+    --decorativeFont: 'Kiwi Maru', serif;
+    --defaultTransition: all 300ms ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: var(--black);
+}
+
+html {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+body {
+    font-family: var(--mainFont);
+}
+
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+::selection {
+    background-color: var(--brown);
+    color: var(--beige);
+}
