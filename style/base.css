@@ -17,7 +17,7 @@
 }
 
 html {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -35,4 +35,18 @@ body {
 ::selection {
     background-color: var(--brown);
     color: var(--beige);
+}
+
+/* MINWIDTH OPTIMALIZATION */
+@media screen and (min-width: 1680px) {
+    html {
+        font-size: 26px;
+    }
+}
+
+/* MAXWIDTH OPTIMALIZATION */
+@media screen and (max-width:768px) {
+    html {
+        font-size: 14px;
+    }
 }
