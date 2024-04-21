@@ -1,0 +1,90 @@
+.sub-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F6C592;
+    z-index: 10;
+}
+
+.logo {
+    background-image: url("../assets/e-vital-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    width: 200px;
+    height: 90px;
+    margin-left: 1rem;
+}
+
+.toggle-button {
+    margin-right: 1rem;
+}
+
+.bar {
+    width: 50px;
+    height: 2px;
+    background-color: #44220D;
+    margin: 10px;
+    box-shadow: 0px 0px 8px hsla(23, 68%, 16%, 0.7);
+}
+
+.about {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F6C592;
+}
+
+.back-img {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/pexels-anntarazevich-6560304.jpg");
+    background-size: cover;
+    background-position: 0,0;
+    opacity: 0.4;
+}
+
+.about-content {
+    position: absolute;
+    top: 100px;
+    right: 10vw;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    background-image: url("../assets/pexels-anntarazevich-6560304.jpg");
+    background-size: cover;
+    background-position: 0,0;
+    box-shadow: 0px 0px 8px hsla(23, 68%, 16%, 0.7);
+}
+
+h1:nth-last-child(2) {
+    color: #F6C592;
+    background-color: #44220D;
+    width: auto;
+    padding: 1rem;
+}
+
+/* MAXWIDTH OPTIMALIZATION */
+@media screen and (max-width:768px) {
+    .about-content {
+        width: 95vw;
+        right: 2.5vw;
+    }
+
+    .profile-pic {
+        width: 50vw;
+        height: 50vw;
+        border-radius: 0px;
+    }
+}
