@@ -17,11 +17,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: inherit;
+    justify-content: center;
     width: 100vw;
-    height: fit-content;
+    min-height: 50vh;
     background-color: hsla(31, 85%, 77%, 0.7);
     padding-bottom: 60px;
+    transition: var(--defaultTransition);
+}
+
+.logo-container:hover {
+    min-height: 100vh;
+    transition: var(--defaultTransition);
 }
 
 .logo {
@@ -116,30 +122,9 @@
     transition-delay: .2ms;
 }
 
-.bar {
-    width: 50px;
-    height: 2px;
-    background-color: #44220D;
-    margin: 10px;
-    box-shadow: 0px 0px 8px hsla(23, 68%, 16%, 0.7);
-}
-
-
-
 /* MAXWIDTH OPTIMALIZATION */
 @media screen and (max-width:768px) {
     html {
         font-size: 14px;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .toggle-button {
-        position: absolute;
-        right: 2rem;
-        top: 1rem;
-        z-index: 10;
     }
 }

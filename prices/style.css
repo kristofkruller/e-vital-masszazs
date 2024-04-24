@@ -1,0 +1,109 @@
+.sub-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F6C592;
+    z-index: 10;
+}
+
+.logo {
+    background-image: url("../assets/e-vital-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    width: 200px;
+    height: 90px;
+    margin-left: 1rem;
+}
+
+.toggle-button {
+    margin-right: 1rem;
+}
+
+.bar {
+    width: 50px;
+    height: 2px;
+    background-color: #44220D;
+    margin: 10px;
+    box-shadow: 0px 0px 8px hsla(23, 68%, 16%, 0.7);
+}
+
+.price {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    background-color: #F6C592;
+}
+
+.back-img {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/pexels-anntarazevich-6560304.jpg");
+    background-size: cover;
+    background-position: 0,0;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+#wrapper {
+    padding-top: 80px;
+}
+
+.prices-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.prices-content > table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prices-content > p {
+    color: #44220D;
+    background-color: #F6C592;
+    width: 84vw;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 1rem;
+    margin: 2.5rem 0;
+}
+
+.prices-content th {
+    font-size: 1.5rem;
+}
+
+.prices-content td {
+    padding: 0.5rem;
+}
+
+.prices-content tr th:nth-child(1), .prices-content tr th:nth-child(2), .prices-content tr td:nth-child(1), .prices-content tr td:nth-child(2) {
+    width: 30vw;
+    word-wrap: break-word;
+}
+
+.prices-content tr th:nth-child(3), .prices-content tr th:nth-child(4), .prices-content tr td:nth-child(3), .prices-content tr td:nth-child(4) {
+    text-align: center;
+    min-width: 12vw;
+}
+
+.prices-content tr {
+    font-size: 1.2rem;
+    height: 3rem;
+    font-weight: 600;
+}
+
+.d1 {
+    background-color: #f6c692b3;
+}
