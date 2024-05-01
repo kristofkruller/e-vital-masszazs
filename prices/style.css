@@ -12,12 +12,12 @@
 }
 
 .logo {
-    background-image: url("../assets/e-vital-logo.png");
+    background-image: url("../assets/evim.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 0% 50%;
-    width: 200px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     margin-left: 1rem;
 }
 
@@ -96,6 +96,7 @@
 .prices-content tr th:nth-child(3), .prices-content tr th:nth-child(4), .prices-content tr td:nth-child(3), .prices-content tr td:nth-child(4) {
     text-align: center;
     min-width: 12vw;
+    text-wrap: nowrap;
 }
 
 .prices-content tr {
