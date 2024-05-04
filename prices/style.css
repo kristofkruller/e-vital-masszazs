@@ -8,17 +8,25 @@
     justify-content: space-between;
     align-items: center;
     background-color: #F6C592;
+    border-bottom: 1px solid black;
     z-index: 10;
 }
 
 .logo {
-    background-image: url("../assets/evim.png");
+    background-image: url("../assets/evim-logo-cir.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 0% 50%;
+    width: 70px;
+    height: 70px;
+    margin-left: 1rem;
+    transition: var(--defaultTransition);
+}
+
+.logo:hover {
     width: 100px;
     height: 100px;
-    margin-left: 1rem;
+    transition: var(--defaultTransition);
 }
 
 .toggle-button {
@@ -30,7 +38,7 @@
     height: 2px;
     background-color: #44220D;
     margin: 10px;
-    box-shadow: 0px 0px 8px hsla(23, 68%, 16%, 0.7);
+    /*box-shadow: 0px 0px 8px hsla(23, 68%, 16%, 0.7);*/
 }
 
 .price {
@@ -70,7 +78,7 @@
     align-items: center;
 }
 
-.prices-content > p {
+/* .prices-content > p {
     color: #44220D;
     background-color: #F6C592;
     width: 84vw;
@@ -78,6 +86,27 @@
     font-weight: 800;
     padding: 1rem;
     margin: 2.5rem 0;
+} */
+
+.massage-title {
+    color: #44220D;
+    background-color: #F6C592;
+    font-size: 1rem;
+    min-width: 65vw;
+    font-style: var(--decorativeFont);
+    font-weight: 700;
+    padding: 1rem 3rem;
+    margin: 2.5rem 0;
+    text-align: center;
+    border-radius: 80px;
+    border: 1px solid black;
+    transition: var(--defaultTransition);
+}
+
+.massage-title:hover {
+    color: #F6C592;
+    background-color: #44220D;
+    transition: var(--defaultTransition);
 }
 
 .prices-content th {

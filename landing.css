@@ -123,11 +123,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 0px;
+    margin-top: 1rem;
 }
 
 .evital {
-    font-family: var(--decorativeFont);
-    font-weight: 500;
+    /* font-family: var(--decorativeFont); */
+    font-weight: 800;
+    font-size: 0px;
 }
 
 .social {
@@ -135,9 +138,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 0px;
     width: 200px;
     gap: 2rem;
+    opacity: 0;
 }
 
 .social-fb {
@@ -151,8 +155,7 @@
 }
 
 .social-fb:hover {
-    height: 60px;
-    width: 60px;
+    transform: scale(1.2);
     transition: var(--defaultTransition);
 }
 
@@ -167,17 +170,17 @@
 }
 
 .social-insta:hover {
-    height: 60px;
-    width: 60px;
+    transform: scale(1.2);
     transition: var(--defaultTransition);
 }
 
 .opening {
-    font-size: 1rem;
+    font-size: 0rem;
 }
 
 .adatkezelesi {
-    font-size: 1rem;
+    font-size: 0rem;
+    transform: translate(0px, -1rem);
 }
 
 .show {
