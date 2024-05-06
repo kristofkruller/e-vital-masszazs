@@ -1,5 +1,5 @@
 .sub-header {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     height: 80px;
@@ -8,17 +8,35 @@
     justify-content: space-between;
     align-items: center;
     background-color: #F6C592;
+    border-bottom: 1px solid black;
     z-index: 10;
 }
 
 .logo {
-    background-image: url("../assets/e-vital-logo.png");
+    background-image: url("../assets/evim-logo-cir.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 0% 50%;
-    width: 200px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     margin-left: 1rem;
+    transition: var(--defaultTransition);
+}
+
+.logo:hover {
+    width: 100px;
+    height: 100px;
+    transition: var(--defaultTransition);
+}
+
+.sub-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sub-header-left > div {
+    font-family: var(--decorativeFont);
 }
 
 .toggle-button {
