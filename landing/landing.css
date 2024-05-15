@@ -22,11 +22,11 @@
     min-height: 50vh;
     background-color: hsla(31, 85%, 77%, 0.7);
     /* padding-bottom: 60px; */
-    padding: 60px 0;
+    padding: 10px 0;
 }
 
 .logo {
-    background-image: url("./assets/evim-logo-cir.svg");
+    background-image: url("../assets/evim-logo-cir.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -148,7 +148,7 @@
 }
 
 .social-fb {
-    background-image: url("./assets/fb.png");
+    background-image: url("../assets/fb.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -163,7 +163,7 @@
 }
 
 .social-insta {
-    background-image: url("./assets/insta.png");
+    background-image: url("../assets/insta.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -184,9 +184,12 @@
 .adatkezelesi {
     font-size: 0rem;
     transform: translate(0px, -.5rem);
+    background: #ffffff30;
+    border-radius: 4px;
 }
 .adatkezelesi:hover {
     font-weight: 600;
+    background: #ffffff50;
 }
 
 /*open!*/
@@ -200,6 +203,12 @@
 .opening.show, .hero-text-2.show {
     font-size: .75rem;
     cursor: default;
+}
+.opening .contact {
+    margin: 1rem 0;
+}
+i.fa {
+    width: 20px;
 }
 .menu.show {
     margin-top: 1rem;

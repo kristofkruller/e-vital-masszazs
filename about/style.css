@@ -24,8 +24,7 @@
 }
 
 .logo:hover {
-    width: 100px;
-    height: 100px;
+    transform: rotate(1turn);
     transition: var(--defaultTransition);
 }
 

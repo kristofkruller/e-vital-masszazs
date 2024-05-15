@@ -62,3 +62,59 @@ p {
         font-size: 14px;
     }
 }
+
+/* SUB SITE STYLES */
+
+/* HEADER */
+
+.sub-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F6C592;
+    border-bottom: 1px solid black;
+    z-index: 10;
+}
+
+.sub-header .logo {
+    background-image: url("./assets/evim-logo-cir.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    width: 70px;
+    height: 70px;
+    margin-left: 1rem;
+    transition: var(--defaultTransition);
+}
+
+.sub-header .logo:hover {
+    transform: rotate(1turn);
+    transition: var(--defaultTransition);
+}
+
+.sub-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sub-header-left > div {
+    font-family: var(--decorativeFont);
+}
+
+.sub-header .toggle-button {
+    margin-right: 1rem;
+}
+
+.sub-header .toggle-button .bar {
+    width: 50px;
+    height: 2px;
+    background-color: #44220D;
+    margin: 10px;
+    /*box-shadow: 0px 0px 8px hsla(23, 68%, 16%, 0.7);*/
+}
