@@ -73,6 +73,10 @@
     padding-top: 80px;
 }
 
+.prices-content * {
+    cursor: default;
+}
+
 .prices-content {
     position: relative;
     display: flex;
