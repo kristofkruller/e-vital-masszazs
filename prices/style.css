@@ -45,29 +45,9 @@
     margin: 2.5rem 0;
 } */
 
-.massage-title {
-    color: #44220D;
-    background-color: #F6C592;
-    font-size: 1rem;
-    min-width: 65vw;
-    font-style: var(--decorativeFont);
-    font-weight: 700;
-    padding: 1rem 3rem;
-    margin: 2.5rem 0;
-    text-align: center;
-    border-radius: 80px;
-    border: 1px solid black;
-    transition: var(--defaultTransition);
-}
-
-.massage-title:hover {
-    color: #F6C592;
-    background-color: #44220D;
-    transition: var(--defaultTransition);
-}
-
 .prices-content th {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+    padding-bottom: .2rem;
 }
 
 .prices-content td {
@@ -87,7 +67,8 @@
 
 .prices-content tr {
     font-size: 1.2rem;
-    height: 3rem;
+    /* height: 3rem; */
+    height: 4.5rem;
     font-weight: 600;
 }
 
