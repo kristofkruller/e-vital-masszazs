@@ -99,7 +99,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 1.5rem;
     height: 0px;
     opacity: 0;
     transition: var(--defaultTransition);
@@ -195,7 +195,7 @@
 /*open!*/
 .show {
     height: auto;
-    padding: 0.5rem 2rem 0.5rem 2rem;
+    padding: 0.2rem 2rem 0.2rem 2rem;
     opacity: 1;
     font-size: 1rem;
     transition: var(--defaultTransition);
@@ -205,7 +205,7 @@
     cursor: default;
 }
 .opening .contact {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 i.fa {
     width: 20px;
