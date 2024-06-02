@@ -264,33 +264,105 @@ i.fa {
   font-family: var(--decorativeFont);
 }
 
-.sub-header .toggle-button {
+.sub-header .toggle-button, .toggle-button.show, .toggle-button.close {
   margin-right: 1rem;
+  padding: 0;
+  cursor: pointer;
 }
 
 .sub-header .toggle-button .bar {
-  width: 50px;
+  width: 40px;
   height: 2px;
   background-color: #44220D;
   margin: 10px;
+  transition: all 0.3s ease;
   /*box-shadow: 0px 0px 8px hsla(23, 68%, 16%, 0.7);*/
 }
 
-/* Transform bars into an X shape */
+/* Keyframes for bar animations (forward) */
+@keyframes bar1-animation-forward {
+  0% { transform: rotate(0) translate(0, 0); }
+  50% { transform: rotate(45deg) translate(7px, 2px); }
+  100% { transform: rotate(45deg) translate(12px, 5px); }
+}
+
+@keyframes bar2-animation-forward {
+  0% { opacity: 1; transform: translateX(0); }
+  50% {  opacity: 0.3; transform: translateX(-50%); }
+  100% { opacity: 0; transform: translateX(-100%); }
+}
+
+@keyframes bar3-animation-forward {
+  0% { transform: rotate(0) translate(0, 0); }
+  50% { transform: rotate(-45deg) translate(7px, -2px); }
+  100% { transform: rotate(-45deg) translate(12px, -5px); }
+}
+
+/* Keyframes for bar animations (reverse) */
+@keyframes bar1-animation-reverse {
+  0% { transform: rotate(45deg) translate(12px, 5px); }
+  50% { transform: rotate(45deg) translate(7px, 2px); }
+  100% { transform: rotate(0) translate(0, 0); }
+}
+
+@keyframes bar2-animation-reverse {
+  0% { opacity: 0; transform: translateX(-100%) }
+  50% { opacity: 0.7; transform: translateX(-20%) }
+  100% { opacity: 1; transform: translateX(0) }
+}
+
+@keyframes bar3-animation-reverse {
+  0% { transform: rotate(-45deg) translate(12px, -5px); }
+  50% { transform: rotate(-45deg) translate(7px, -2px); }
+  100% { transform: rotate(0) translate(0, 0); }
+}
+
+/* Active state animations */
 .toggle-button.show #bar1 {
-  transform: rotate(45deg) translate(5px, 5px);
+  animation: bar1-animation-forward 0.5s forwards;
 }
 
 .toggle-button.show #bar2 {
-  opacity: 0;
+  animation: bar2-animation-forward 0.5s forwards;
 }
 
 .toggle-button.show #bar3 {
-  transform: rotate(-45deg) translate(5px, -5px);
+  animation: bar3-animation-forward 0.5s forwards;
 }
 
+/* Reverse animations */
+.toggle-button.close #bar1 {
+  animation: bar1-animation-reverse 0.5s forwards;
+}
+
+.toggle-button.close #bar2 {
+  animation: bar2-animation-reverse 0.5s forwards;
+}
+
+.toggle-button.close #bar3 {
+  animation: bar3-animation-reverse 0.5s forwards;
+}
+
+/* .menu {
+  display: none;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.menu.show {
+  display: block;
+  animation: menu-animation 0.5s forwards;
+} */
+
+@keyframes menu-animation {
+  0% { opacity: 0; transform: translateY(-100%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 /* SUB SITES #subSiteMenuContent */
 
-#subSiteMenuContent {
-
+#subSiteMenuContent .logo-container{
+  min-height: unset;
+  width: unset;
+  padding: 0;
 }

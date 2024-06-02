@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Disable transition for hiding
         e.classList.add("no-transition");
         e.classList.remove("show");
-
+        if (e.classList.contains("toggle-button")) e.classList.add("close");
         // Trigger reflow to apply no-transition class immediately
         e.offsetHeight; // This line forces the browser to reflow
 
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
         // landing menu content
         if (e.classList.contains("menuOpener") && e.classList.contains("landing")) e.innerText = e.innerText.replace("Menü", "x");
+        if (e.classList.contains("toggle-button")) e.classList.remove("close");
         e.classList.add("show");
       }
     });
