@@ -2,14 +2,30 @@ document.addEventListener("DOMContentLoaded", function() {
   // landing menu
   const menu = document.querySelector(".menuOpener");
   // console.log(menu);
-  const menuToggle = document.querySelectorAll(".menuOpener, .nav-list, .nav-list-item, .also, .evital, .social, .opening, .adatkezelesi, .hero-text-2, .appointment-btn");
+  const menuToggle = document.querySelectorAll(`
+    .menuOpener, 
+    .nav-list, 
+    .nav-list-item, 
+    .also, 
+    .evital, 
+    .social, 
+    .opening, 
+    .adatkezelesi, 
+    .hero-text-2, 
+    .appointment-btn,
+    #subSiteMenuContent
+  `);
 
   menu.addEventListener("click", function() {
     menuToggle.forEach(e => {
       if (e.classList.contains("show")) {
         // landing menu content
         if (e.classList.contains("menuOpener") && e.classList.contains("landing")) e.innerText = e.innerText.replace("x", "Menü");
-
+        if (e.id === "subSiteMenuContent") {
+          setTimeout(() => {
+            e.style.display = 'none';
+          }, 300);
+        };
         // Disable transition for hiding
         e.classList.add("no-transition");
         e.classList.remove("show");
@@ -22,6 +38,11 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
         // landing menu content
         if (e.classList.contains("menuOpener") && e.classList.contains("landing")) e.innerText = e.innerText.replace("Menü", "x");
+        if (e.id === "subSiteMenuContent") {
+          setTimeout(() => {
+            e.style.display = 'block';
+          }, 300);
+        };
         if (e.classList.contains("toggle-button")) e.classList.remove("close");
         e.classList.add("show");
       }
