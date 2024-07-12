@@ -161,3 +161,11 @@ p {
   height: 100vh;
   z-index: 1;
 }
+
+.inactive, .inactive:hover {
+  background: lightgray !important;
+  color: gray !important;
+  cursor: default !important;
+  box-shadow: none !important;
+  opacity: .6 !important;
+}
