@@ -4,11 +4,4 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    left: 0px;
-    top: 0px;
-    height: 100vh;
-    width: 100%;
-    background-image: url("../assets/pexels-anntarazevich-6560304.jpg");
-    background-size: cover;
-    background-position: 0,0;
 }

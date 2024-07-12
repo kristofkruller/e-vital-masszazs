@@ -138,3 +138,26 @@ p {
   background-color: #44220D;
   transition: var(--defaultTransition);
 }
+
+/*BG*/
+.back-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(246, 198, 146, 0.7);
+  z-index: 2;
+}
+
+.back-img, #landing {
+  background-image: url("../assets/pexels-anntarazevich-6560304.jpg");
+  background-size: cover;
+  background-position: 0,0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}

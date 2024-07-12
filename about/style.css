@@ -57,12 +57,7 @@
 }
 
 .back-img {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("../assets/pexels-anntarazevich-6560304.jpg");
-    background-size: cover;
-    background-position: 0,0;
-    opacity: 0.4;
+    z-index: 1;
 }
 
 .about-content {
