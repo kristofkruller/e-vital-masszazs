@@ -7,18 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="">
   <title>Évi-Vitál Masszázs</title>
-  <meta name="description" content="Évi-Vitál Masszázs weboldal">
-  <meta name="application-name" content="Évi-Vitál Masszázs weboldal">
-  <meta name="keywords" content="masszázs, Balatonfűzfő, Balatonalmádi, hátfájás, sérv, babamasszázs">
+  <meta name="description" content="Vitál masszázs, töltődj fel Balatonfűzfőn, vagy Balatonalmádin">
+  <meta name="application-name" content="Évi Vitál Masszázs weboldal">
+  <meta name="keywords" content="masszázs, Balatonfűzfő, Balatonalmádi, hátfájás, sérv, babamasszázs, vitál masszázs, nyugati masszázs, gyógymasszázs, keleti masszázs">
   <meta name="creator" content="Gyulánszki Éva">
   <meta name="robots" content="index, follow">
-  <meta name="category" content="Massage">
-  <meta property="og:title" content="Évi-Vitál Masszázs">
-  <meta property="og:description" content="Foglalj időpontot online, töltődj fel Balatonfűzfőn, vagy Balatonalmádin">
-  <meta property="og:site_name" content="Évi-Vitál Masszázs">
+  <meta name="category" content="vitál masszázs, nyugati masszázs, gyógymasszázs, babamasszázs, keleti masszázs">
+  <meta property="url" content="https://evimasszazs.netlify.app/">
+  <meta property="og:title" content="Évi Vitál Masszázs">
+  <meta property="og:description" content="Vitál masszázs, töltődj fel Balatonfűzfőn, vagy Balatonalmádin">
+  <meta property="og:site_name" content="Évi Vitál Masszázs">
   <meta property="og:locale" content="en-HU">
   <meta property="og:type" content="website">
-
+  <meta property="og:image" content="https://images.pexels.com/photos/7700/pexels-photo.jpg">
+  <meta property="og:url" content="https://evimasszazs.netlify.app/">
   <!--css-ek behivatkozása-->
   <link rel="stylesheet" href="../base.css">
   <link rel="stylesheet" href="../header.css">
@@ -37,7 +39,6 @@
     rel="stylesheet">
 
   <script src="../script.js" defer></script>
-  <script src="./massages.js" defer></script>
 </head>
 <body class="sub">
   <header class="sub-header">
@@ -53,9 +54,10 @@
       </div>
       <div id="subSiteMenuContent">
         <div class="logo-container">
-          <!--st: script toggle mark-->
+          <a href="./index.html" class="logo"></a>
+
           <ul class="nav-list st">
-            <li><a href="#" class="inactive nav-list-item st">Árlista</a></li>
+            <li><a href="../prices/prices.html" class="nav-list-item st">Árlista</a></li>
             <li><a href="#" class="inactive nav-list-item st">Időpontot foglalok</a></li>
             <li><a href="#" class="inactive nav-list-item st">Rólam</a></li>
           </ul>
@@ -76,7 +78,6 @@
                 <i class="fa fa-phone"></i> 06204213031
               </div>
             </div>
-            <!-- <a href="./assets/e-vital-logo.png" class="adatkezelesi st"> -->
             <a href="#" class="adatkezelesi st">
               Adatkezelési tájékoztató
             </a>
@@ -387,9 +388,6 @@
         <div class="massage-name">
           Kötőszöveti reflexzónás mézmasszázs
         </div>
-        <div class="massage-desc">
-
-        </div>
         <div class="price-container">
           <div class="price-left">
             <div>1 alkalom részmasszázs (hát, váll, derék, láb, kéz) - 60 perc</div>
@@ -402,10 +400,7 @@
 
       <div class="massage-container">
         <div class="massage-name">
-          Gua Sha arcmasszázs
-        </div>
-        <div class="massage-desc">
-
+          Gua Sha vagy Hawaii Lomi Lomi arcmasszázs
         </div>
         <div class="price-container">
           <div class="price-left">
@@ -437,9 +432,6 @@
       <div class="massage-container">
         <div class="massage-name">
           Herbalance arcmasszázs
-        </div>
-        <div class="massage-desc">
-
         </div>
         <div class="price-container">
           <div class="price-left">
@@ -516,48 +508,6 @@
           </div>
         </div>
       </div>
-
-      <div class="massage-container">
-        <div class="massage-name">
-          Thai babamasszázs
-        </div>
-        <div class="massage-desc">
-          A Thai babamasszázs egy tradicionális thai masszázstechnika, ami a simogatásra, gyengéd nyomásra és
-          dörzsölésre összpontosít, ami segíthet lazítani a csecsemő izmait.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom egyéni - 30 perc</div>
-            <div>1 alkalom csoportos (min. 3 fő) - 3 x 30 perc</div>
-          </div>
-          <div class="price-right">
-            <div>5 000 Ft</div>
-            <div>3 000 Ft / fő</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="massage-container">
-        <div class="massage-name">
-          Olajos babamasszázs
-        </div>
-        <div class="massage-desc">
-          Az olajos babamasszázst természetes olajok segítségével történik. Támogatja a csecsemők fizikai fejlődését
-          azáltal, hogy segíti a baba mozgáskoordinációjának fejlesztését. Gyengéd masszázsmozdulatok alkalmazásával
-          csökkenthető a babák nyugtalansága.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom egyéni - 30 perc</div>
-            <div>1 alkalom csoportos (min. 3 fő) - 3 x 30 perc</div>
-          </div>
-          <div class="price-right">
-            <div>5 000 Ft</div>
-            <div>3 000 Ft / fő</div>
-          </div>
-        </div>
-      </div>
-
     </section>
   </main>
 </body>

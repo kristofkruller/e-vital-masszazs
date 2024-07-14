@@ -1,78 +1,158 @@
-.price {
-    position: absolute;
+.prices {
+    position: relative;
     width: 100vw;
-    height: auto;
-    background-color: #F6C592;
+    background-color: #f6c592;
+    padding: 2rem 1rem;
 }
 
 .back-img {
     opacity: 0.15;
 }
 
-.prices-content * {
+.prices-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prices-content:last-of-type {
+    margin-top: 4rem;
+}
+
+.massage-title {
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.prices-header,
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1024px;
+    padding: 0.5rem 0;
+}
+
+.prices-header {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    margin-bottom: 1rem;
+}
+
+.prices-header-item {
+    font-size: 1.2rem;
+    flex: 1;
+    text-align: start;
     cursor: default;
 }
 
-.prices-content {
-    position: relative;
+.prices-header-item:nth-child(2) {
+    text-align: end;
+}
+
+.price-description {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    z-index: 2;
+    flex: 1;
 }
 
-.prices-content > table {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.price-description * {
+    line-height: 1;
 }
 
-.prices-content th {
-    font-size: 1.35rem;
-    padding-bottom: .2rem;
+.price-description span {
+    font-weight: bold;
 }
 
-.prices-content td {
-    padding: 0.5rem;
+.price-value {
+    font-weight: bold;
+    text-align: right;
+    cursor: default;
 }
 
-.prices-content tr th:nth-child(1), .prices-content tr th:nth-child(2), .prices-content tr td:nth-child(1), .prices-content tr td:nth-child(2) {
-    width: 30vw;
-    word-wrap: break-word;
-}
-
-.prices-content tr th:nth-child(3), .prices-content tr th:nth-child(4), .prices-content tr td:nth-child(3), .prices-content tr td:nth-child(4) {
-    text-align: center;
-    min-width: 12vw;
-    text-wrap: nowrap;
-}
-
-.prices-content tr {
-    font-size: 1.2rem;
-    /* height: 3rem; */
-    height: 4.5rem;
-    font-weight: 600;
-}
-
-.d1 {
+.highlighted {
     background-color: #f6c692b3;
 }
 
-.price > a {
-    position: absolute;
-    bottom: 2.7rem;
-    left: .5rem;
+.price-item {
+    padding: 0.5rem;
+}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2;
+.price-item p {
+    font-size: 0.7rem;
+    opacity: 0.75;
+    margin-left: 0.5rem;
 }
-.price > a p {
-    font-size: .5rem;
-}
-.price .prices-content .fa.fa-info {
-    margin-left: 0.25rem;
+
+.fa-info {
+    margin-left: 0.5rem;
     cursor: pointer;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 15px;
+    /* background: linear-gradient(to right bottom, var(--beige), var(--brown)); */
+    background: var(--brown);
+    box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem #4048bf4d;
+    min-height: min-content;
+    padding-top: 1rem;
+    overflow: hidden;
+    z-index: 2;
+    opacity: .9;
+}
+
+.popup-content {
+    font-size: .65rem;
+    color: var(--white);
+    cursor: default;
+}
+
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #f3f3f366;
+    border-radius: 100rem;
+    color: inherit;
+    font-size: 1rem;
+    transition: var(--defaultTransition);
+}
+.popup-close::before {
+    content: "×";
+    color: var(--white);
+    transform: translateY(-0.1rem);
+}
+.popup:hover .popup-close::before {
+    transform: translateY(-0.1rem) scale(1.2);
+    transition: var(--defaultTransition);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+    .prices-content {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .prices-header-item,
+    .price-value {
+        width: 100%;
+        align-content: center;
+    }
 }

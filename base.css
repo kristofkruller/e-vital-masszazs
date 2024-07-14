@@ -1,7 +1,8 @@
 :root {
     --beige: #F6C592;
     --brown: #44220D;
-    --black: #000000;
+    --black: #0f0f0f;
+    --white: #f3f3f3;
     --mainFont: 'Quicksand', sans-serif;
     --decorativeFont: 'Kiwi Maru', serif;
     --defaultTransition: all 300ms ease-in-out;
@@ -59,7 +60,7 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 0;
     list-style: none;
     text-decoration: none;
-    color: #44220D;
+    color: var(--brown);
 }
 
 html {
@@ -79,7 +80,7 @@ h1 {
     font: var(--mainFont);
     font-size: 2rem;
     font-weight: 700;
-    color: #44220D;
+    color: var(--brown);
     text-align: center;
 }
 
@@ -99,25 +100,14 @@ p {
     color: var(--beige);
 }
 
-/* MINWIDTH OPTIMALIZATION */
-@media screen and (min-width: 1680px) {
-    html {
-        font-size: 26px;
-    }
-}
-
-/* MAXWIDTH OPTIMALIZATION */
-@media screen and (max-width:768px) {
-    html {
-        font-size: 14px;
-    }
-}
-
 /* SUB SITE STYLES */
-
+/* menu z-fix */
+.show {
+  z-index: 3;
+}
 .massage-title {
-  color: #44220D;
-  background-color: #F6C592;
+  color: var(--brown);
+  background-color: var(--beige);
   /* font-size: 1rem; */
   /* min-width: 65vw; */
   font-size: 1.5rem;
@@ -127,16 +117,14 @@ p {
   padding: 1rem 3rem;
   margin: 2.5rem 0;
   text-align: center;
-  /* border-radius: 80px; */
-  /* border: 1px solid black; */
-  transition: var(--defaultTransition);
+  transition: all 700ms ease-in-out;
   cursor: default;
 }
 
 .massage-title:hover {
-  color: #F6C592;
-  background-color: #44220D;
-  transition: var(--defaultTransition);
+  color: var(--beige);
+  background-color: var(--brown);
+  transition: all 700ms ease-in-out;
 }
 
 /*BG*/
@@ -151,7 +139,7 @@ p {
 }
 
 .back-img, #landing {
-  background-image: url("../assets/pexels-anntarazevich-6560304.jpg");
+  background-image: url("../assets/bg.jpg");
   background-size: cover;
   background-position: 0,0;
   position: fixed;
@@ -168,4 +156,19 @@ p {
   cursor: default !important;
   box-shadow: none !important;
   opacity: .6 !important;
+}
+/* MINWIDTH OPTIMALIZATION */
+@media screen and (min-width: 1680px) {
+  html {
+      font-size: 26px;
+  }
+}
+/* MAXWIDTH OPTIMALIZATION */
+@media screen and (max-width:768px) {
+  html {
+      font-size: 14px;
+  }
+  .back-img, #landing {
+    background-image: url("../assets/sm-bg.jpg");
+  }
 }
