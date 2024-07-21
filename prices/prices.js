@@ -13,14 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const x = e.pageX
       const y = e.pageY
       popup.style.top = `${y + 5}px`
-      popup.style.left = `${x}px`
+      popup.style.left = window.innerWidth > 1024 ? (`${x}px`) : (`${window.innerWidth/2}px`) 
       popup.style.display = "block"
       currentIcon = icon
     }
   }
 
   const hidePopUp = () => {
-    console.log(0)
     popup.style.display = "none"
     popUpContent.textContent = ""
     currentIcon = null
