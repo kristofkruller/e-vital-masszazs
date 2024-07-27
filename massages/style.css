@@ -39,28 +39,27 @@
 }
 
 .price-right {
-    text-align: right; 
+    text-align: right;
     text-wrap: nowrap;
 }
 
 /* MAXWIDTH OPTIMALIZATION */
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
     .massage-container {
         width: 80vw;
     }
-    
+
     .price-left {
         max-width: 70%;
     }
 }
-@media screen and (max-width:523px) {
+@media screen and (max-width: 523px) {
     .price-container .price-right > div:nth-child(2) {
         transform: translateY(100%);
     }
 }
-@media screen and (max-width:425px) {
+@media screen and (max-width: 425px) {
     .massage-container {
         width: 90vw;
     }
-
 }

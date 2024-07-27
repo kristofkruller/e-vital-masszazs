@@ -9,21 +9,22 @@
     opacity: 0.15;
 }
 
-.prices-content {
+.prices-content,
+.content-block {
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+.content-block {
+    padding-bottom: 1rem;
 }
 
 .prices-content:last-of-type {
     margin-top: 4rem;
-}
-
-.massage-title {
-    margin: 1rem 0;
-    padding: 0;
 }
 
 .prices-header,
@@ -56,6 +57,7 @@
     display: flex;
     align-items: center;
     flex: 1;
+    min-width: 50%;
 }
 
 .price-description * {
@@ -72,7 +74,7 @@
     cursor: default;
 }
 
-.highlighted {
+.price-item:nth-of-type(even) {
     background-color: #f6c692b3;
 }
 
@@ -108,11 +110,11 @@
     padding-top: 1rem;
     overflow: hidden;
     z-index: 2;
-    opacity: .9;
+    opacity: 0.9;
 }
 
 .popup-content {
-    font-size: .65rem;
+    font-size: 0.65rem;
     color: var(--white);
     cursor: default;
 }
@@ -146,6 +148,10 @@
 @media screen and (min-width: 1024px) {
     .prices-content {
         font-size: 0.8rem;
+    }
+    .massage-title {
+        margin: 0.1rem 0;
+        padding: 0;
     }
 }
 

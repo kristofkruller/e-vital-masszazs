@@ -1,3 +1,5 @@
+import { fadeIn } from "../script.js"
+
 document.addEventListener("DOMContentLoaded", () => {
   //POPUP
   const popup = document.querySelector(".popup")
@@ -13,7 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const x = e.pageX
       const y = e.pageY
       popup.style.top = `${y + 5}px`
-      popup.style.left = window.innerWidth > 1024 ? (`${x}px`) : (`${window.innerWidth/2}px`) 
+      popup.style.left =
+        window.innerWidth > 1024 ? `${x}px` : `${window.innerWidth / 2}px`
       popup.style.display = "block"
       currentIcon = icon
     }
@@ -41,4 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Hide the popup when clicking x || outside
   closePopUp.addEventListener("click", hidePopUp)
   document.addEventListener("click", hidePopUp)
+
+  //EFFECTS
+  const fadeLeft = fadeIn("fadeInLeft")
+  const fadeRight = fadeIn("fadeInRight")
+  document
+    .querySelectorAll(".price-item:nth-of-type(even)")
+    .forEach((block) => fadeLeft.observe(block))
+  document
+    .querySelectorAll(".price-item:nth-of-type(odd)")
+    .forEach((block) => fadeRight.observe(block))
 })
