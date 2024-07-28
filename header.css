@@ -40,7 +40,7 @@
     width: fit-content;
     padding: 0.5rem 2rem 0.5rem 2rem;
     margin-top: 2rem;
-    background-color: #f6c592;
+    background-color: var(--beige);
     font-weight: 700;
     font-size: 1rem;
     border-radius: 4px;
@@ -48,15 +48,15 @@
     transition: var(--defaultTransition);
 }
 .menuOpener:hover:not(.menuOpener.toggle-button) {
-    background-color: #44220d;
-    color: #f6c592;
+    background-color: var(--brown);
+    color: var(--beige);
     transition: var(--defaultTransition);
 }
 .appointment-btn {
     width: fit-content;
     padding: 0.5rem 2rem 0.5rem 2rem;
     margin-top: 2rem;
-    background-color: #f6c592;
+    background-color: var(--beige);
     font-weight: 700;
     font-size: 1rem;
     border-radius: 4px;
@@ -64,8 +64,8 @@
     transition: var(--defaultTransition);
 }
 .appointment-btn:hover {
-    background-color: #44220d;
-    color: #f6c592;
+    background-color: var(--brown);
+    color: var(--beige);
     transition: var(--defaultTransition);
 }
 .nav-list {
@@ -79,17 +79,16 @@
     transition: var(--defaultTransition);
 }
 .nav-list-item {
-    background-color: #f6c592;
+    background-color: var(--beige);
     font-family: var(--mainFont);
     font-weight: 700;
-    font-size: 1px;
     border-radius: 4px;
     box-shadow: 0 0 8px #45220d66;
     transition: var(--defaultTransition);
 }
 .nav-list-item:hover {
-    background-color: #44220d;
-    color: #f6c592;
+    background-color: var(--brown);
+    color: var(--beige);
     transition: var(--defaultTransition);
 }
 .also {
@@ -209,7 +208,7 @@ body.sub > main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f6c592;
+    background-color: var(--beige);
     border-bottom: 1px solid var(--black);
     z-index: 10;
 }
@@ -253,7 +252,7 @@ body.sub > main {
 .sub-header .toggle-button .bar {
     width: 40px;
     height: 2px;
-    background-color: #44220d;
+    background-color: var(--brown);
     margin: 10px;
     transition: var(--defaultTransition);
 }
@@ -377,7 +376,7 @@ body.sub > main {
     padding: 3rem 0 0 0px;
     justify-content: flex-start;
     gap: 1rem;
-    background-color: #f6c592;
+    background-color: var(--beige);
     height: 100vh;
 }
 #subSiteMenuContent .opening.show {

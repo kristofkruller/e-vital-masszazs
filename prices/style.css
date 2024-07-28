@@ -1,7 +1,7 @@
 .prices {
     position: relative;
     width: 100vw;
-    background-color: #f6c592;
+    background-color: var(--beige);
     padding: 2rem 1rem;
 }
 

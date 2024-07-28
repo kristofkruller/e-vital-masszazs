@@ -121,6 +121,7 @@ p {
 .show {
     z-index: 3;
 }
+
 .massage-title {
     color: var(--brown);
     background-color: var(--beige);
@@ -178,13 +179,13 @@ p {
 
 /* EFFECTS */
 .fadeInLeft {
-    animation: fadeInLeft ease 1s;
+    animation: fadeInLeft ease .5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
 .fadeInRight {
-    animation: fadeInRight ease 1s;
+    animation: fadeInRight ease .5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -192,7 +193,7 @@ p {
 @keyframes fadeInLeft {
     0%{
         opacity: 0;
-        transform: translateX(-50px);
+        transform: translateX(-25px);
     }
     100%{
         opacity: 1;
@@ -203,7 +204,7 @@ p {
 @keyframes fadeInRight {
     0%{
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateX(25px);
     }
     100%{
         opacity: 1;
