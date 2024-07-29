@@ -1,3 +1,5 @@
+import { eventDataCollector, bookEvent } from "./letsBook.js"
+
 document.addEventListener("DOMContentLoaded", () => {
   const datePicker = document.getElementById("datePicker")
 
@@ -6,4 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Az input minimum értékének beállítása
   datePicker.setAttribute("min", today)
+
+  document.getElementById("bookingForm").addEventListener("submit", async (e) => {
+    const eventData = eventDataCollector(e)
+    const res = await bookEvent(eventData)
+    console.info(res)
+  })
 })
+
+
+
