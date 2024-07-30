@@ -9,8 +9,18 @@ TV and Extra Large Screens – 1201px and more */
 
 ## env
 ./functions/serviceAccountKey.json **database cred**
-.env 
-  FIREBASE_URL = **database url**
+.env
+FIREBASE_URL = **database url**
+PROJECT_ID =
+PRIVATE_KEY_ID =
+PRIVATE_KEY = **"stringként!"**
+CLIENT_EMAIL =
+CLIENT_ID =
+AUTH_URI =
+TOKEN_URI =
+AUTH_PROVIDER_X509_CERT_URL =
+CLIENT_X509_CERT_URL =
+UNIVERSE_DOMAIN =
 
 A Netlify lehetőséget biztosít környezeti változók kezelésére, de a .env fájlokat nem közvetlenül támogatja deploy során. Ehelyett a Netlify UI vagy CLI segítségével adhatsz meg környezeti változókat.
 

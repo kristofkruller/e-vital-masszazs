@@ -1,10 +1,10 @@
 const reqValidator = (newEvent) => {
-  if (!newEvent.begin || !newEvent.end || !newEvent.massage || !newEvent.email || !newEvent.phone) {
+  const { date, begin, end, cdate, email, name, phone, massage } = newEvent
+  if (!date, !begin, !end, !cdate, !email, !name, !phone, !massage) {
     return false
   }
   return true
 }
-
 
 module.exports = {
   reqValidator
