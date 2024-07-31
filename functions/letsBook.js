@@ -18,28 +18,36 @@ exports.handler = async (event) => {
       }
     }
 
-    const snapshot = await db
-      .collection("events")
-      .where("begin", "<=", newEvent.end)
-      .where("end", ">=", newEvent.begin)
-      .get()
+    // Ellenőrzés, hogy nincs-e ütközés
+    const ref = db.ref('events');
+    const snapshot = await ref.once('value');
+    const events = snapshot.val();
+    let isConflict = false;
 
-    if (!snapshot.empty) {
+    if (events) {
+      Object.keys(events).forEach(key => {
+        const event = events[key];
+        if ((newEvent.begin < event.end && newEvent.end > event.begin)) {
+          isConflict = true;
+        }
+      });
+    }
+
+    if (isConflict) {
       return {
         statusCode: 409,
-        body: JSON.stringify({
-          message:
-            "A megadott időintervallum már foglalt egy létező esemény által",
-        }),
-      }
+        body: JSON.stringify({ message: 'Az időpont már foglalt' })
+      };
     }
 
-    await db.collection("events").add(newEvent)
-
-    return {
-      statusCode: 201,
-      body: JSON.stringify(newEvent),
-    }
+     // Új esemény mentése
+     const newEventRef = ref.push(); // új esemény hivatkozást hoz létre
+     newEventRef.set(newEvent); // menti az adatokat
+ 
+     return {
+       statusCode: 201,
+       body: JSON.stringify({ message: 'Időpont sikeresen lefoglalva', id: newEventRef.key })
+     };
   } catch (error) {
     return {
       statusCode: 500,

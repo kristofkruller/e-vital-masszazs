@@ -18,5 +18,5 @@ admin.initializeApp({
   databaseURL: process.env.FIREBASE_URL
 })
 
-const db = admin.firestore()
+const db = admin.database()
 module.exports = { db }
