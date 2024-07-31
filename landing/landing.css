@@ -1,7 +1,16 @@
 #landing {
     position: absolute;
+    display: -webkit-box; /* Old iOS Safari */
+    display: -ms-flexbox; /* IE 10 */
     display: flex;
+    -webkit-box-orient: vertical; /* Old iOS Safari */
+    -webkit-box-direction: normal; /* Old iOS Safari */
+    -ms-flex-direction: column; /* IE 10 */
     flex-direction: column;
+    -webkit-box-pack: center; /* Old iOS Safari */
+    -ms-flex-pack: center; /* IE 10 */
     justify-content: center;
+    -webkit-box-align: center; /* Old iOS Safari */
+    -ms-flex-align: center; /* IE 10 */
     align-items: center;
 }

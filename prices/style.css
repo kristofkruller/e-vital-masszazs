@@ -13,8 +13,16 @@
 .content-block {
     position: relative;
     z-index: 2;
+    display: -webkit-box; /* Old iOS Safari */
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE 10 */
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column; /* Old iOS Safari */
+    -ms-flex-direction: column; /* IE 10 */
     flex-direction: column;
+    -webkit-box-align: center; /* Old iOS Safari */
+    -ms-flex-align: center; /* IE 10 */
     align-items: center;
     width: 100%;
 }
@@ -29,7 +37,13 @@
 
 .prices-header,
 .price-item {
+    display: -webkit-box; /* Old iOS Safari */
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE 10 */
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-pack: justify; /* Old iOS Safari */
+    -ms-flex-pack: justify; /* IE 10 */
     justify-content: space-between;
     width: 100%;
     max-width: 1024px;
@@ -44,6 +58,10 @@
 
 .prices-header-item {
     font-size: 1.2rem;
+    -webkit-box-flex: 1; /* Old iOS Safari */
+    -moz-box-flex: 1; /* Firefox */
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     text-align: start;
     cursor: default;
@@ -54,8 +72,18 @@
 }
 
 .price-description {
+    display: -webkit-box; /* Old iOS Safari */
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE 10 */
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-align: center; /* Old iOS Safari */
+    -ms-flex-align: center; /* IE 10 */
     align-items: center;
+    -webkit-box-flex: 1; /* Old iOS Safari */
+    -moz-box-flex: 1; /* Firefox */
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     min-width: 70%;
 }
@@ -80,6 +108,13 @@
 
 .price-item {
     padding: 0.5rem;
+    /* init animation */
+    opacity: 0;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
 }
 
 .price-item p {
@@ -100,6 +135,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding: 10px;
     border-radius: 15px;
@@ -123,8 +162,16 @@
     position: absolute;
     top: 5px;
     right: 5px;
+    display: -webkit-box; /* Old iOS Safari */
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE 10 */
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-pack: center; /* Old iOS Safari */
+    -ms-flex-pack: center; /* IE 10 */
     justify-content: center;
+    -webkit-box-align: center; /* Old iOS Safari */
+    -ms-flex-align: center; /* IE 10 */
     align-items: center;
     width: 1rem;
     height: 1rem;
@@ -132,15 +179,23 @@
     border-radius: 100rem;
     color: inherit;
     font-size: 1rem;
+    -webkit-transition: var(--defaultTransition); /* Safari */
+    -moz-transition: var(--defaultTransition); /* Firefox */
+    -o-transition: var(--defaultTransition); /* Opera */
     transition: var(--defaultTransition);
 }
 .popup-close::before {
     content: "×";
     color: var(--white);
+    -webkit-transform: translateY(-0.1rem);
     transform: translateY(-0.1rem);
 }
 .popup:hover .popup-close::before {
+    -webkit-transform: translateY(-0.1rem) scale(1.2);
     transform: translateY(-0.1rem) scale(1.2);
+    -webkit-transition: var(--defaultTransition); /* Safari */
+    -moz-transition: var(--defaultTransition); /* Firefox */
+    -o-transition: var(--defaultTransition); /* Opera */
     transition: var(--defaultTransition);
     cursor: pointer;
 }

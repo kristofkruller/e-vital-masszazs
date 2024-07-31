@@ -7,34 +7,66 @@
     z-index: 1;
 }
 
+.about, .about-content {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
 .about {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .about-content {
-    width: 80vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    width: 50vw;
     gap: 1rem;
+    margin-top: 1rem;
     z-index: 2;
-    margin: 1rem 0;
 }
-
-.about-content p, h1, h2 {
+.about-frame {
+    width: calc(100% + 2rem);
+    height: calc(100% + 5rem);
+    position: absolute;
+    top: -4rem;
+    left: -1rem;
+    border: solid 1px var(--beige);
+}
+.about-content p,
+h1,
+h2,
+h3 {
     color: var(--beige);
-    text-align: justify;
+    text-align: center;
 }
 
 h1 {
     color: var(--brown);
     background-color: var(--beige);
-    width: auto;
     padding: 1rem;
+}
+
+.about-content a {
+    cursor: pointer;
+    color: var(--beige);
+    box-shadow: 0 0 0 0 var(--beige);
+    animation: pulse 2s infinite;
+    padding: 5px;
 }
 
 .profile-pic {
@@ -42,9 +74,40 @@ h1 {
     min-height: 300px;
     margin-top: 60px;
     background-color: var(--black);
-    background-image: url("");
+    background-image: url("../assets/profile_pic.jpg");
     background-size: cover;
     background-position: 0, 0;
     box-shadow: 0px 0px 8px #45220db3;
-    z-index: 2;
+    border: solid 1px var(--beige);
+    border-radius: 50%;
+    z-index: 3;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(246, 197, 146, .7);
+    }
+    70% {
+        box-shadow: 0 0 0 4px rgba(246, 197, 146, 1);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(246, 197, 146, .9);
+    }
+}
+@-webkit-keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(246, 197, 146, .7);
+    }
+    70% {
+        box-shadow: 0 0 0 4px rgba(246, 197, 146, 1);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(246, 197, 146, .9);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-content {
+        width: 80vw;
+    }
 }

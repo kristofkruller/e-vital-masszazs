@@ -3,17 +3,36 @@
 }
 
 *:hover {
+    -webkit-transition: var(--defaultTransition);
+    -moz-transition: var(--defaultTransition);
+    -o-transition: var(--defaultTransition);
     transition: var(--defaultTransition);
 }
 
 #bookingForm {
     position: relative;
+    display: -webkit-box; /* Old iOS Safari */
+    display: -moz-box; /* Old Firefox */
+    display: -ms-flexbox; /* IE 10 */
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-orient: vertical; /* Old iOS Safari */
+    -webkit-box-direction: normal; /* Old iOS Safari */
+    -moz-box-orient: vertical; /* Old Firefox */
+    -moz-box-direction: normal; /* Old Firefox */
+    -ms-flex-direction: column; /* IE 10 */
     flex-direction: column;
+    -webkit-box-align: center; /* Old iOS Safari */
+    -ms-flex-align: center; /* IE 10 */
     align-items: center;
+    -webkit-box-pack: center; /* Old iOS Safari */
+    -ms-flex-pack: center; /* IE 10 */
     justify-content: center;
     padding-top: 60px;
     z-index: 2;
+    -webkit-transition: var(--defaultTransition);
+    -moz-transition: var(--defaultTransition);
+    -o-transition: var(--defaultTransition);
     transition: var(--defaultTransition);
 }
 
@@ -63,6 +82,9 @@ button[type="submit"] {
     font-size: 1rem;
     border-radius: 5px;
     box-shadow: 0 0 8px #45220d66;
+    -webkit-transition: var(--defaultTransition);
+    -moz-transition: var(--defaultTransition);
+    -o-transition: var(--defaultTransition);
     transition: var(--defaultTransition);
     padding: 0.2rem 2rem 0.2rem 2rem;
 }
@@ -70,6 +92,9 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: var(--brown);
     color: var(--beige);
+    -webkit-transition: var(--defaultTransition);
+    -moz-transition: var(--defaultTransition);
+    -o-transition: var(--defaultTransition);
     transition: var(--defaultTransition);
     cursor: pointer;
 }
