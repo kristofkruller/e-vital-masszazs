@@ -19,4 +19,6 @@ admin.initializeApp({
 })
 
 const db = admin.database()
-module.exports = { db }
+const auth = admin.auth()
+
+module.exports = { db, auth }
