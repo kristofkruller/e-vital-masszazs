@@ -3,7 +3,7 @@ const { auth } = require('./firebase.js')
 const authenticate = async (event) => {
   const authHeader = event.headers.authorization
 
-  if(!authHeader || !authHeader.startsWith('Bearet ')) {
+  if(!authHeader || !authHeader.startsWith('Bearer ')) {
     throw new Error('Unauthorized')
   }
 
