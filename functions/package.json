@@ -10,11 +10,12 @@
     "massage",
     "site",
     "appointment",
-    "booking"
+    "service"
   ],
   "author": "Kruller-Web",
   "license": "ISC",
   "dependencies": {
-    "firebase-admin": "^12.3.0"
+    "firebase-admin": "^12.3.0",
+    "functions": "file:"
   }
 }

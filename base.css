@@ -182,10 +182,9 @@ p {
 
 .inactive,
 .inactive:hover {
-    background: lightgray !important;
-    color: gray !important;
+    background: var(--brown) !important;
+    color: var(--white) !important;
     cursor: default !important;
-    box-shadow: none !important;
     opacity: 0.6 !important;
 }
 
@@ -247,7 +246,7 @@ p {
 }
 
 /* MINWIDTH OPTIMALIZATION */
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1680px) and (min-height: 952px) {
     html {
         font-size: 26px;
     }
