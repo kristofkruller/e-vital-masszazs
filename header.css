@@ -47,10 +47,13 @@
     -ms-flex-pack: center; /* IE 10 */
     justify-content: center;
     width: 100vw;
-    min-height: 50vh;
     background-color: #f6c692b3;
     /* padding-bottom: 60px; */
     padding: 10px 0;
+}
+.logo-container:not(#subSiteMenuContent .logo-container){
+    min-height: 50vh;
+    max-height: 87vh;
 }
 .logo {
     background-image: url("../assets/evim-logo-cir.svg");
@@ -61,7 +64,7 @@
     width: 15rem;
 }
 .hero-text {
-    margin: 0 4rem 0 4rem;
+    margin: 0 4rem;
     text-align: center;
 }
 .hero-text-1 {
@@ -131,6 +134,7 @@
     border-radius: 4px;
     box-shadow: 0 0 8px #45220d66;
 }
+
 .nav-list-item:hover {
     background-color: var(--brown);
     color: var(--beige);
@@ -145,6 +149,7 @@
     align-items: center;
     height: 0;
     margin-top: 1rem;
+    text-align: center;
 }
 .evital {
     font-weight: 800;
@@ -172,8 +177,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
 }
 .social-fb:hover {
     -webkit-transform: scale(1.2);
@@ -184,8 +189,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
 }
 .social-insta:hover {
     -webkit-transform: scale(1.2);
@@ -213,6 +218,18 @@
     opacity: 1;
     font-size: 1rem;
 }
+.nav-list.st.show {
+    padding: 0;
+    display: flex;
+}
+.nav-list.st.show li,
+.nav-list.st.show li a {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 .opening.show,
 .hero-text-2.show {
     font-size: 0.75rem;
@@ -220,6 +237,10 @@
 }
 .opening .contact {
     margin: 0.5rem 0;
+}
+.opening.show .contact {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 i.fa {
     width: 20px;
@@ -239,13 +260,6 @@ i.fa {
 .no-transition {
     -webkit-transition: height 0.3s, padding 0.3s, opacity 0s, font-size 0s !important;
     transition: height 0.3s, padding 0.3s, opacity 0s, font-size 0s !important;
-}
-
-/* GENERAL MAXWIDTH OPTIMALIZATION */
-@media screen and (max-width: 768px) {
-    .hero-text {
-        margin: 0 2rem 0 2rem;
-    }
 }
 
 /* SUBSITE HEADER */
@@ -488,6 +502,7 @@ body.sub > main {
     position: absolute;
     right: 0;
 }
+
 #subSiteMenuContent {
     opacity: 0;
     display: none;
@@ -502,8 +517,8 @@ body.sub > main {
     padding: 3rem 0 0 0px;
     justify-content: flex-start;
     gap: 1rem;
-    background-color: var(--beige);
     height: 100vh;
+    background-color: var(--beige);
 }
 #subSiteMenuContent .opening.show {
     font-size: 1rem;
@@ -512,17 +527,30 @@ body.sub > main {
 }
 
 /*RESPO*/
+@media screen and (min-width: 1680px) and (min-height: 952px) {
+    .social-fb,
+    .social-insta {
+        height: 50px;
+        width: 50px;
+    }
+}
 @media screen and (max-width: 1024px) {
     .sub-header-right .logo {
         display: block;
         max-height: 150px;
     }
+    #subSiteMenuContent.show {
+        background: no-repeat center/190% url(../assets/sm-bg.jpg);
+        -webkit-transform: translateY(-14px);
+        transform: translateY(-14px);
+    }
     #subSiteMenuContent .logo-container {
         padding: 1rem 0;
         width: 100vw;
         height: 100vh;
-        -webkit-transform: translateY(-14px);
-        transform: translateY(-14px);
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        background-color: #f6c692b3;
     }
     .menuOpener.show:not(.menuOpener.toggle-button) {
         top: 1vh;
@@ -532,10 +560,10 @@ body.sub > main {
         margin-top: 10px;
         gap: 1rem;
     }
-    .social-fb,
-    .social-insta {
-        height: 30px;
-        width: 30px;
+}
+@media screen and (max-width: 768px) {
+    .hero-text {
+        margin: 0 2rem 0 2rem;
     }
 }
 /*under iphone6*/

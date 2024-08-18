@@ -14,3 +14,7 @@
     -ms-flex-align: center; /* IE 10 */
     align-items: center;
 }
+
+.hero-text-2.show .contact {
+    display: none;
+}

@@ -7,6 +7,10 @@
     z-index: 1;
 }
 
+body.sub {
+    height: 100vh;
+}
+
 .about, .about-content {
     display: -webkit-box;
     display: -moz-box;
@@ -27,16 +31,11 @@
     align-items: center;
 }
 
-.about {
-    width: 100vw;
-    height: 100vh;
-}
-
 .about-content {
     position: relative;
     width: 50vw;
     gap: 1rem;
-    margin-top: 1rem;
+    margin: 1rem 0 50px 0;
     z-index: 2;
 }
 .about-frame {
