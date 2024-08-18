@@ -126,6 +126,7 @@
     gap: 1.5rem;
     height: 0;
     opacity: 0;
+    display: none;
 }
 .nav-list-item {
     background-color: var(--beige);
@@ -235,12 +236,17 @@
     font-size: 0.75rem;
     cursor: default;
 }
-.opening .contact {
+
+.contact {
     margin: 0.5rem 0;
-}
-.opening.show .contact {
     font-size: 1.2rem;
     font-weight: bold;
+}
+.opening .contact {
+    display: none;
+}
+.opening.show .contact {
+    display: block;
 }
 i.fa {
     width: 20px;
