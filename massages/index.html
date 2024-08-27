@@ -1,521 +1,520 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Weboldalt készítette: https://github.com/kristofkruller/ -->
+  <head>
+    <meta name="google-site-verification" content="nXP4D3AwLfHhmfk0wSF5o961ir52XFVmRawOQBGQtU4" />
+    <meta charset="UTF-8">
 
-<head>
-  <meta name="google-site-verification" content="nXP4D3AwLfHhmfk0wSF5o961ir52XFVmRawOQBGQtU4" />
-  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/evim.png">
+    <title>Évi-Vitál Masszázs</title>
+    <meta name="description" content="Vitál masszázs, töltődj fel Balatonfűzfőn, vagy Balatonalmádin">
+    <meta name="application-name" content="Évi Vitál Masszázs weboldal">
+    <meta name="keywords" content="masszázs, Balatonfűzfő, Balatonalmádi, hátfájás, sérv, babamasszázs, vitál masszázs, nyugati masszázs, gyógymasszázs, keleti masszázs">
+    <meta name="creator" content="Gyulánszki Éva">
+    <meta name="robots" content="index, follow">
+    <meta name="category" content="vitál masszázs, nyugati masszázs, gyógymasszázs, babamasszázs, keleti masszázs">
+    <meta property="url" content="https://evitalmasszazs.hu/">
+    <meta property="og:title" content="Évi Vitál Masszázs">
+    <meta property="og:description" content="Vitál masszázs, töltődj fel Balatonfűzfőn, vagy Balatonalmádin">
+    <meta property="og:site_name" content="Évi Vitál Masszázs">
+    <meta property="og:locale" content="en-HU">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.pexels.com/photos/7700/pexels-photo.jpg">
+    <meta property="og:url" content="https://evitalmasszazs.hu/">
+    <!--css-ek behivatkozása-->
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="./style.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="">
-  <title>Évi-Vitál Masszázs</title>
-  <meta name="description" content="Vitál masszázs, töltődj fel Balatonfűzfőn, vagy Balatonalmádin">
-  <meta name="application-name" content="Évi Vitál Masszázs weboldal">
-  <meta name="keywords" content="masszázs, Balatonfűzfő, Balatonalmádi, hátfájás, sérv, babamasszázs, vitál masszázs, nyugati masszázs, gyógymasszázs, keleti masszázs">
-  <meta name="creator" content="Gyulánszki Éva">
-  <meta name="robots" content="index, follow">
-  <meta name="category" content="vitál masszázs, nyugati masszázs, gyógymasszázs, babamasszázs, keleti masszázs">
-  <meta property="url" content="https://evimasszazs.netlify.app/">
-  <meta property="og:title" content="Évi Vitál Masszázs">
-  <meta property="og:description" content="Vitál masszázs, töltődj fel Balatonfűzfőn, vagy Balatonalmádin">
-  <meta property="og:site_name" content="Évi Vitál Masszázs">
-  <meta property="og:locale" content="en-HU">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://images.pexels.com/photos/7700/pexels-photo.jpg">
-  <meta property="og:url" content="https://evimasszazs.netlify.app/">
-  <!--css-ek behivatkozása-->
-  <link rel="stylesheet" href="../base.css">
-  <link rel="stylesheet" href="../header.css">
-  <link rel="stylesheet" href="./style.css">
+    <!--font Quicksand-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet">
+    <!--font Kiwi Maru-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Mulish&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet">
 
-  <!--font Quicksand-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Quicksand:wght@300..700&display=swap"
-    rel="stylesheet">
-  <!--font Kiwi Maru-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Mulish&family=Quicksand:wght@300..700&display=swap"
-    rel="stylesheet">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- font awesome cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <script src="../script.js" type="module"></script>
-  <script src="./massages.js" type="module"></script>
-</head>
-<body class="sub">
-  <header class="sub-header">
-    <div class="sub-header-left">
-      <a href="../index.html" class="logo"></a>
-      <div>É-Vitál Masszázs</div>
-    </div>
-    <div class="sub-header-right">
-      <div class="menuOpener toggle-button">
-        <div class="bar" id="bar1"></div>
-        <div class="bar" id="bar2"></div>
-        <div class="bar" id="bar3"></div>
+    <script src="../script.js" type="module"></script>
+    <script src="./massages.js" type="module"></script>
+  </head>
+  <body class="sub">
+    <header class="sub-header">
+      <div class="sub-header-left">
+        <a href="../index.html" class="logo"></a>
+        <div>É-Vitál Masszázs</div>
       </div>
-      <div id="subSiteMenuContent">
-        <div class="logo-container">
-          <a href="../index.html" class="logo"></a>
+      <div class="sub-header-right">
+        <div class="menuOpener toggle-button">
+          <div class="bar" id="bar1"></div>
+          <div class="bar" id="bar2"></div>
+          <div class="bar" id="bar3"></div>
+        </div>
+        <div id="subSiteMenuContent">
+          <div class="logo-container">
+            <a href="../index.html" class="logo"></a>
 
-          <ul class="nav-list st">
-            <li><a href="#" class="nav-list-item st inactive">Masszázstípusok és leírásuk</a></li>
-            <li><a href="../prices/index.html" class="nav-list-item st">Árlista</a></li>
-            <!-- <li><a href="#" class="nav-list-item st inactive">Időpontot foglalok</a></li> -->
-            <li><a href="../about/index.html" class="nav-list-item st">Rólam</a></li>
-          </ul>
+            <ul class="nav-list st">
+              <li><a href="#" class="nav-list-item st inactive">Masszázstípusok és leírásuk</a></li>
+              <li><a href="../prices/index.html" class="nav-list-item st">Árlista</a></li>
+              <!-- <li><a href="#" class="nav-list-item st inactive">Időpontot foglalok</a></li> -->
+              <li><a href="../about/index.html" class="nav-list-item st">Rólam</a></li>
+            </ul>
 
-          <div class="also st">
-            <div class="evital st">
-              É-Vitál Masszázs
-            </div>
-
-            <div class="social st">
-              <a href="https://www.facebook.com/eva.gyulanszki" class="social-fb"></a>
-              <a href="https://www.instagram.com/gyulanszkievi" class="social-insta"></a>
-            </div>
-            <div class="opening st">
-              Nyitvatartás előzetes bejelentkezés alapján! <br />
-              <div class="contact">
-                <i class="fa fa-envelope"></i> gyulievi@gmail.com <br />
-                <i class="fa fa-phone"></i> 06204213031
+            <div class="also st">
+              <div class="evital st">
+                É-Vitál Masszázs
               </div>
+
+              <div class="social st">
+                <a href="https://www.facebook.com/eva.gyulanszki" class="social-fb"></a>
+                <a href="https://www.instagram.com/gyulanszkievi" class="social-insta"></a>
+              </div>
+              <div class="opening st">
+                Nyitvatartás előzetes bejelentkezés alapján! <br />
+                <div class="contact">
+                  <i class="fa fa-envelope"></i> gyulievi@gmail.com <br />
+                  <i class="fa fa-phone"></i> 06204213031
+                </div>
+              </div>
+              <!-- <a href="#" class="adatkezelesi st">
+                Adatkezelési tájékoztató
+              </a> -->
             </div>
-            <!-- <a href="#" class="adatkezelesi st">
-              Adatkezelési tájékoztató
-            </a> -->
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <div class="back-img"></div>
-    <div class="back-layer"></div>
-    <section class="massages">
+    <main>
+      <div class="back-img"></div>
+      <div class="back-layer"></div>
+      <section class="massages">
 
-      <!--Nyugati masszázsok blokk-->
-      <div class="massage-title">Nyugati típusú masszázsok</div>
-      <div class="massage-container">
-        <div class="massage-name">
-          Stresszoldó, relaxáló svéd masszázs
-        </div>
-        <div class="massage-desc">
-          Célja a relaxált állapot, a testi-lelki folyamatok nyugalmi, harmonikus, optimális működésének elérése.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom teljes test masszázs - 90 perc</div>
-            <div>1 alkalom részmasszázs (hát, váll, derék) - 60 perc</div>
+        <!--Nyugati masszázsok blokk-->
+        <div class="massage-title">Nyugati típusú masszázsok</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Stresszoldó, relaxáló svéd masszázs
           </div>
-          <div class="price-right">
-            <div>10 000 Ft</div>
-            <div>8 000 Ft</div>
+          <div class="massage-desc">
+            Célja a relaxált állapot, a testi-lelki folyamatok nyugalmi, harmonikus, optimális működésének elérése.
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom teljes test masszázs - 90 perc</div>
+              <div>1 alkalom részmasszázs (hát, váll, derék) - 60 perc</div>
+            </div>
+            <div class="price-right">
+              <div>10 000 Ft</div>
+              <div>8 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Lazító, izomregeneráló sportmasszázs
-        </div>
-        <div class="massage-desc">
-          A sportmasszázs gyakran kapja „a legális doppingszer” jelzőt a sportolók között, mivel számos pozitív élettani
-          hatással rendelkezik.
-          <br>Elősegíti a sportteljesítmény javulását és a gyors regenerációt. Komplex módszer, amely az edzés és
-          versenyzés minden szakaszában támogatja a sportolót.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom teljes test masszázs - 90 perc</div>
-            <div>1 alkalom részmasszázs (hát, váll, derék, láb, kéz) - 30 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Lazító, izomregeneráló sportmasszázs
           </div>
-          <div class="price-right">
-            <div>12 000 Ft</div>
-            <div>6 000 Ft</div>
+          <div class="massage-desc">
+            A sportmasszázs gyakran kapja „a legális doppingszer” jelzőt a sportolók között, mivel számos pozitív élettani
+            hatással rendelkezik.
+            <br>Elősegíti a sportteljesítmény javulását és a gyors regenerációt. Komplex módszer, amely az edzés és
+            versenyzés minden szakaszában támogatja a sportolót.
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom teljes test masszázs - 90 perc</div>
+              <div>1 alkalom részmasszázs (hát, váll, derék, láb, kéz) - 30 perc</div>
+            </div>
+            <div class="price-right">
+              <div>12 000 Ft</div>
+              <div>6 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Integrált manuál technika és állapot felmérés
-        </div>
-        <div class="massage-desc">
-          A technika jelentése: Masszázsba integrált manuális (kézi) technikák:
-          <br>
-          Miofasciális oldás - kötöszövet lazítása, Trigger pontok oldása, Ízületi mobilizáció, Trakció - nyújtás
-          <br>
-          Az integrált kezelést mindig megelőzi egy állapotfelmérés és ez alapján kerül összeállításra a kezelési
-          sorrend. Vagyis ez a legkomplexebb kezelési módszer
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom teljes test - 80 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Integrált manuál technika és állapot felmérés
           </div>
-          <div class="price-right">
-            <div>12 000 Ft</div>
+          <div class="massage-desc">
+            A technika jelentése: Masszázsba integrált manuális (kézi) technikák:
+            <br>
+            Miofasciális oldás - kötöszövet lazítása, Trigger pontok oldása, Ízületi mobilizáció, Trakció - nyújtás
+            <br>
+            Az integrált kezelést mindig megelőzi egy állapotfelmérés és ez alapján kerül összeállításra a kezelési
+            sorrend. Vagyis ez a legkomplexebb kezelési módszer
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom teljes test - 80 perc</div>
+            </div>
+            <div class="price-right">
+              <div>12 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Köpölyözés
-        </div>
-        <div class="massage-desc">
-          Az ideális izomtónust beállíthatjuk a köpölyözési technika segítségével, legyen túlfeszült, vagy laza, vagy
-          tónustalan
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom teljes test kezelés - 45 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Köpölyözés
           </div>
-          <div class="price-right">
-            <div>8 000 Ft</div>
+          <div class="massage-desc">
+            Az ideális izomtónust beállíthatjuk a köpölyözési technika segítségével, legyen túlfeszült, vagy laza, vagy
+            tónustalan
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom teljes test kezelés - 45 perc</div>
+            </div>
+            <div class="price-right">
+              <div>8 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Triggerpont kezelés
-        </div>
-        <div class="massage-desc">
-          Trauma, túlhasználat, valamint izomegyensúly felborulásának hatására kialakult trigger pont oldás
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom teljes test kezelés - 45 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Triggerpont kezelés
           </div>
-          <div class="price-right">
-            <div>8 000 Ft</div>
+          <div class="massage-desc">
+            Trauma, túlhasználat, valamint izomegyensúly felborulásának hatására kialakult trigger pont oldás
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom teljes test kezelés - 45 perc</div>
+            </div>
+            <div class="price-right">
+              <div>8 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Kinezio tape
-        </div>
-        <div class="massage-desc">
-          A túlterhelt, feszült izmok, szalagok, izületi fájdalmak, sérülések gyógyulásának lerövidítésére alkalmazzuk.
-          <br>
-          Kismamák életét is nagyban megkönnyíti.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>Kinezio tape felhelyezése - 20 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Kinezio tape
           </div>
-          <div class="price-right">
-            <div>3 000 Ft</div>
+          <div class="massage-desc">
+            A túlterhelt, feszült izmok, szalagok, izületi fájdalmak, sérülések gyógyulásának lerövidítésére alkalmazzuk.
+            <br>
+            Kismamák életét is nagyban megkönnyíti.
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>Kinezio tape felhelyezése - 20 perc</div>
+            </div>
+            <div class="price-right">
+              <div>3 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Lávaköves masszázs
-        </div>
-        <div class="massage-desc">
-          A lávaköves masszázs lényege, hogy felhevített kis kövek kerülnek elhelyezésre a test energiaközpontjaira,
-          miközben maga a massázs is lávakövekkel történik. Ezek nagyjából 50 fokosra melegített bazaltkövek.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom teljes test kezelés - 60 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Lávaköves masszázs
           </div>
-          <div class="price-right">
-            <div>12 000 Ft</div>
+          <div class="massage-desc">
+            A lávaköves masszázs lényege, hogy felhevített kis kövek kerülnek elhelyezésre a test energiaközpontjaira,
+            miközben maga a massázs is lávakövekkel történik. Ezek nagyjából 50 fokosra melegített bazaltkövek.
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom teljes test kezelés - 60 perc</div>
+            </div>
+            <div class="price-right">
+              <div>12 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Nyirok drenázs
-        </div>
-        <div class="massage-desc">
-          A károsodott nyirokrendszer csökkent működését segítő technika
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom teljes test masszázs - 90 perc</div>
-            <div>1 alkalom részmasszázs - 45 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Nyirok drenázs
           </div>
-          <div class="price-right">
-            <div>12 000 Ft</div>
-            <div>8 000 Ft</div>
+          <div class="massage-desc">
+            A károsodott nyirokrendszer csökkent működését segítő technika
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom teljes test masszázs - 90 perc</div>
+              <div>1 alkalom részmasszázs - 45 perc</div>
+            </div>
+            <div class="price-right">
+              <div>12 000 Ft</div>
+              <div>8 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Irodai székmasszázs
-        </div>
-        <div class="massage-desc">
-          A nyak vagy a vállak merevsége, valamint a karokban és a csuklókban tapasztalható feszültség a masszázs
-          segítségével javítható. Az irodai székmasszázs nemcsak azonnali megkönnyebbülést és stresszcsökkentést nyújt,
-          hanem segíthet megelőzni az irodai munkavégzés során gyakran előforduló izom- és ízületi problémákat.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom részmasszázs (váll, hát, nyak, fej, kar) - 25 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Irodai székmasszázs
           </div>
-          <div class="price-right">
-            <div>4 000 Ft</div>
+          <div class="massage-desc">
+            A nyak vagy a vállak merevsége, valamint a karokban és a csuklókban tapasztalható feszültség a masszázs
+            segítségével javítható. Az irodai székmasszázs nemcsak azonnali megkönnyebbülést és stresszcsökkentést nyújt,
+            hanem segíthet megelőzni az irodai munkavégzés során gyakran előforduló izom- és ízületi problémákat.
           </div>
-        </div>
-      </div>
-      <!--Keleti masszázsok blokk-->
-      <div class="massage-title">Keleti típusú masszázsok</div>
-      <div class="massage-container">
-        <div class="massage-name">
-          Himalálya sókristály gua sha intenzív mélyszöveti masszázs
-        </div>
-        <div class="massage-desc">
-          Olyan személyek számára ajánlott, akiknek szükségük van a szervezetükben felgyülemlett stressz és feszültség
-          oldására.
-          <br>
-          A kezelés során alkalmazott sókristályok a mélyebben elhelyezkedő izmok és szövetek számára hasznos ionokat
-          bocsátanak ki.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom teljes test masszázs - 90 perc</div>
-            <div>1 alkalom részmasszázs (hát, váll, derék) - 40 perc</div>
-          </div>
-          <div class="price-right">
-            <div>12 000 Ft</div>
-            <div>8 000 Ft</div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom részmasszázs (váll, hát, nyak, fej, kar) - 25 perc</div>
+            </div>
+            <div class="price-right">
+              <div>4 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
+        <!--Keleti masszázsok blokk-->
+        <div class="massage-title">Keleti típusú masszázsok</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Himalálya sókristály gua sha intenzív mélyszöveti masszázs
+          </div>
+          <div class="massage-desc">
+            Olyan személyek számára ajánlott, akiknek szükségük van a szervezetükben felgyülemlett stressz és feszültség
+            oldására.
+            <br>
+            A kezelés során alkalmazott sókristályok a mélyebben elhelyezkedő izmok és szövetek számára hasznos ionokat
+            bocsátanak ki.
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom teljes test masszázs - 90 perc</div>
+              <div>1 alkalom részmasszázs (hát, váll, derék) - 40 perc</div>
+            </div>
+            <div class="price-right">
+              <div>12 000 Ft</div>
+              <div>8 000 Ft</div>
+            </div>
+          </div>
+        </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Indonéz bambusz masszázs
-        </div>
-        <div class="massage-desc">
-          A masszázs különböző hosszúságú és átmérőjű banbuszrudakkal történik. a A bambusz kovasav tartalma elősegíti
-          az ásványi anyagok felszívódását, emellett számos előnnyel rendelkezik.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom teljes test masszázs - 90 perc</div>
-            <div>1 alkalom részmasszázs (hát, váll, derék) - 45 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Indonéz bambusz masszázs
           </div>
-          <div class="price-right">
-            <div>12 000 Ft</div>
-            <div>8 000 Ft</div>
+          <div class="massage-desc">
+            A masszázs különböző hosszúságú és átmérőjű banbuszrudakkal történik. a A bambusz kovasav tartalma elősegíti
+            az ásványi anyagok felszívódását, emellett számos előnnyel rendelkezik.
           </div>
-        </div>
-      </div>
-      <div class="massage-container">
-        <div class="massage-name">
-          Tibeti méregtelenítő mézmasszás
-        </div>
-        <div class="massage-desc">
-          A tibeti mézmasszázs a "természetes megújulás forrása"!
-          <br>
-          Egyedülállóan ötvözi a méz méregtelenítő és tápláló tulajdonságait, így kivételes élményt és mély regenerációt
-          nyújt a kezelt személy számára
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom teljes test masszázs - 60 perc</div>
-          </div>
-          <div class="price-right">
-            <div>10 000 Ft</div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom teljes test masszázs - 90 perc</div>
+              <div>1 alkalom részmasszázs (hát, váll, derék) - 45 perc</div>
+            </div>
+            <div class="price-right">
+              <div>12 000 Ft</div>
+              <div>8 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Tibeti méregtelenítő mézmasszás
+          </div>
+          <div class="massage-desc">
+            A tibeti mézmasszázs a "természetes megújulás forrása"!
+            <br>
+            Egyedülállóan ötvözi a méz méregtelenítő és tápláló tulajdonságait, így kivételes élményt és mély regenerációt
+            nyújt a kezelt személy számára
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom teljes test masszázs - 60 perc</div>
+            </div>
+            <div class="price-right">
+              <div>10 000 Ft</div>
+            </div>
+          </div>
+        </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Talpcsakra, frissítő masszázs
-        </div>
-        <div class="massage-desc">
-          Egészség megőrző technika, firssít, relaxál, segíti a szervezet öngyógyító képességeinek beindulását.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom talpmasszázs - 30 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Talpcsakra, frissítő masszázs
           </div>
-          <div class="price-right">
-            <div>5 000 Ft</div>
+          <div class="massage-desc">
+            Egészség megőrző technika, firssít, relaxál, segíti a szervezet öngyógyító képességeinek beindulását.
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom talpmasszázs - 30 perc</div>
+            </div>
+            <div class="price-right">
+              <div>5 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Kéz- reflexzónás kézmasszázs
-        </div>
-        <div class="massage-desc">
-          A masszázs irodai dolgozóknak, valamint időseknek egyaránt ajánlott. A kezelés hatására javulhat a kézizmok
-          rugalmassága, valamint enyhülhet a kézízületi merevség.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom masszázs - 30 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Kéz- reflexzónás kézmasszázs
           </div>
-          <div class="price-right">
-            <div>5 000 Ft</div>
+          <div class="massage-desc">
+            A masszázs irodai dolgozóknak, valamint időseknek egyaránt ajánlott. A kezelés hatására javulhat a kézizmok
+            rugalmassága, valamint enyhülhet a kézízületi merevség.
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom masszázs - 30 perc</div>
+            </div>
+            <div class="price-right">
+              <div>5 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Talpdiagnosztika és méregtelenítő talpmasszázs
-        </div>
-        <div class="massage-desc">
-          Önállóan, illetve kiegészítő kezelésként is hatékonyan alkalmazható, mivel a masszázs során a talpon található
-          reflexológiai pontok stimulációja történik. Ezek a pontok kapcsolatban állnak más testrészekkel és szervekkel,
-          így fejtve ki jótékony hatását.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom masszázs - 30 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Talpdiagnosztika és méregtelenítő talpmasszázs
           </div>
-          <div class="price-right">
-            <div>5 000 Ft</div>
+          <div class="massage-desc">
+            Önállóan, illetve kiegészítő kezelésként is hatékonyan alkalmazható, mivel a masszázs során a talpon található
+            reflexológiai pontok stimulációja történik. Ezek a pontok kapcsolatban állnak más testrészekkel és szervekkel,
+            így fejtve ki jótékony hatását.
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom masszázs - 30 perc</div>
+            </div>
+            <div class="price-right">
+              <div>5 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Kötőszöveti reflexzónás mézmasszázs
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom részmasszázs (hát, váll, derék, láb, kéz) - 60 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Kötőszöveti reflexzónás mézmasszázs
           </div>
-          <div class="price-right">
-            <div>10 000 Ft</div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom részmasszázs (hát, váll, derék, láb, kéz) - 60 perc</div>
+            </div>
+            <div class="price-right">
+              <div>10 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Gua Sha vagy Hawaii Lomi Lomi arcmasszázs
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom arcmasszázs - 30 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Gua Sha vagy Hawaii Lomi Lomi arcmasszázs
           </div>
-          <div class="price-right">
-            <div>5 000 Ft</div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom arcmasszázs - 30 perc</div>
+            </div>
+            <div class="price-right">
+              <div>5 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Japán arcmasszázs
-        </div>
-        <div class="massage-desc">
-          Arcbőrre, és az bőr alatti izmokra hat, megelemeli a bőr tónusát, megduplázza a hatóanyagok hatását.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom arcmasszázs - 30 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Japán arcmasszázs
           </div>
-          <div class="price-right">
-            <div>5 000 Ft</div>
+          <div class="massage-desc">
+            Arcbőrre, és az bőr alatti izmokra hat, megelemeli a bőr tónusát, megduplázza a hatóanyagok hatását.
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom arcmasszázs - 30 perc</div>
+            </div>
+            <div class="price-right">
+              <div>5 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Herbalance arcmasszázs
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom arcmasszázs - 30 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Herbalance arcmasszázs
           </div>
-          <div class="price-right">
-            <div>6 000 Ft</div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom arcmasszázs - 30 perc</div>
+            </div>
+            <div class="price-right">
+              <div>6 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Wellness testkezelés, testtekercselés, 20 perc mozgás
-        </div>
-        <div class="massage-desc">
-          Innovatív módszer, gyorsabb eredmények.
-          <br>
-          A testtekercselés intenzíven hidratálja a bőrt és serkenti a vérkeringést, így azonnal érezhető az enyhülés és
-          a felfrissülés. A vérkeringést serkentő krémek használata, és a masszázstechnika eredménye a méreganyagok
-          gyorsabb távozása, így a hatékony alakformálás. A speciális tekercsek, krémek és technikák segítségével a
-          testtekercselés csökkenti a cellulit megjelenését és nagymértékben segít az alakformálásban.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom - 20+20+20 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Wellness testkezelés, testtekercselés, 20 perc mozgás
           </div>
-          <div class="price-right">
-            <div>12 000 Ft</div>
+          <div class="massage-desc">
+            Innovatív módszer, gyorsabb eredmények.
+            <br>
+            A testtekercselés intenzíven hidratálja a bőrt és serkenti a vérkeringést, így azonnal érezhető az enyhülés és
+            a felfrissülés. A vérkeringést serkentő krémek használata, és a masszázstechnika eredménye a méreganyagok
+            gyorsabb távozása, így a hatékony alakformálás. A speciális tekercsek, krémek és technikák segítségével a
+            testtekercselés csökkenti a cellulit megjelenését és nagymértékben segít az alakformálásban.
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom - 20+20+20 perc</div>
+            </div>
+            <div class="price-right">
+              <div>12 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!--Babamasszázsok blokk-->
-      <div class="massage-title">Babavárással kapcsolatos masszázsok</div>
-      <div class="massage-container">
-        <div class="massage-name">
-          Kismama masszázs
-        </div>
-        <div class="massage-desc">
-          A kismama masszázs lehetőséget adhat a várandós anyáknak arra, hogy egy pillanatra magukra szánjanak egy kis
-          időt, hogy ellazuljanak és enyhítsék a terhesség okozta fizikai és érzelmi stresszt. Ez a speciális masszázs
-          segít ebben.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>1 alkalom teljes test masszázs - 60 perc</div>
-            <div>1 alkalom részmasszázs (hát, váll, derék) - 30 perc</div>
+        <!--Babamasszázsok blokk-->
+        <div class="massage-title">Babavárással kapcsolatos masszázsok</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Kismama masszázs
           </div>
-          <div class="price-right">
-            <div>8 000 Ft</div>
-            <div>5 000 Ft</div>
+          <div class="massage-desc">
+            A kismama masszázs lehetőséget adhat a várandós anyáknak arra, hogy egy pillanatra magukra szánjanak egy kis
+            időt, hogy ellazuljanak és enyhítsék a terhesség okozta fizikai és érzelmi stresszt. Ez a speciális masszázs
+            segít ebben.
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>1 alkalom teljes test masszázs - 60 perc</div>
+              <div>1 alkalom részmasszázs (hát, váll, derék) - 30 perc</div>
+            </div>
+            <div class="price-right">
+              <div>8 000 Ft</div>
+              <div>5 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="massage-container">
-        <div class="massage-name">
-          Kismama tape
-        </div>
-        <div class="massage-desc">
-          A terhesség alatt sok nő tapasztalhat hát-, illetve derékfájást a testi változásából adódóan. A kineziológiai
-          tapasz segíthet támogatni az izmokat és így enyhítheti a hátfájást.
-          <br>
-          Emellett hatékonyan alkalmazható csípőízületi fájdalom enyhítésére, illetve a duzzadt lábak terhelését is
-          javíthatja egy szakszerűen felhelyezett tapasz.
-        </div>
-        <div class="price-container">
-          <div class="price-left">
-            <div>Kinezio tape felhelyezése - 20 perc</div>
+        <div class="massage-container">
+          <div class="massage-name">
+            Kismama tape
           </div>
-          <div class="price-right">
-            <div>3 000 Ft</div>
+          <div class="massage-desc">
+            A terhesség alatt sok nő tapasztalhat hát-, illetve derékfájást a testi változásából adódóan. A kineziológiai
+            tapasz segíthet támogatni az izmokat és így enyhítheti a hátfájást.
+            <br>
+            Emellett hatékonyan alkalmazható csípőízületi fájdalom enyhítésére, illetve a duzzadt lábak terhelését is
+            javíthatja egy szakszerűen felhelyezett tapasz.
+          </div>
+          <div class="price-container">
+            <div class="price-left">
+              <div>Kinezio tape felhelyezése - 20 perc</div>
+            </div>
+            <div class="price-right">
+              <div>3 000 Ft</div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-</body>
-
+      </section>
+    </main>
+  </body>
 </html>

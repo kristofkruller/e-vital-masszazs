@@ -9,6 +9,21 @@
     opacity: 0.15;
 }
 
+.prices-content h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: .5rem;
+    border-top: solid 1px var(--brown);
+    border-bottom: solid 1px var(--brown);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.prices-content .fa-info-circle {
+    font-size: 1rem;
+    margin-right: .5rem;
+}
 .prices-content,
 .content-block {
     position: relative;
@@ -199,7 +214,9 @@
     transition: var(--defaultTransition);
     cursor: pointer;
 }
-
+.massage-title:first-of-type {
+    margin-top: 1.25rem
+}
 @media screen and (min-width: 1024px) {
     .prices-content {
         font-size: 0.8rem;
@@ -215,5 +232,10 @@
     .price-value {
         width: 100%;
         align-content: center;
+    }
+    .prices-content .fa-info-circle {
+        align-self: flex-start;
+        font-size: 1.5rem;
+        margin-right: 1rem;
     }
 }
