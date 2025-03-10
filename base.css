@@ -1,35 +1,103 @@
 :root {
-    --beige: #F6C592;
-    --brown: #44220D;
-    --black: #000000;
-    --mainFont: 'Quicksand', sans-serif;
-    --decorativeFont: 'Kiwi Maru', serif;
+    --beige: #f6c592;
+    --brown: #44220d;
+    --black: #0f0f0f;
+    --white: #f3f3f3;
+    --mainFont: "Quicksand", sans-serif;
+    --decorativeFont: "Kiwi Maru", serif;
     --defaultTransition: all 300ms ease-in-out;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; /* MacOS Firefox */
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
 }
 
 * {
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
-    color: #44220D;
+    color: var(--brown);
 }
 
 html {
     font-size: 18px;
     font-weight: 500;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     font-family: var(--mainFont);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 h1 {
     font: var(--mainFont);
     font-size: 2rem;
     font-weight: 700;
-    color: #44220D;
+    color: var(--brown);
     text-align: center;
 }
 
@@ -43,22 +111,153 @@ p {
     height: 0;
     background: transparent;
 }
+::-moz-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
 
 ::selection {
     background-color: var(--brown);
     color: var(--beige);
 }
 
+/* SUB SITE STYLES */
+/* menu z-fix */
+.show {
+    z-index: 3;
+}
+
+.massage-title {
+    color: var(--brown);
+    background-color: var(--beige);
+    /* font-size: 1rem; */
+    /* min-width: 65vw; */
+    font-size: 1.5rem;
+    width: 100vw;
+    font-style: var(--decorativeFont);
+    font-weight: 700;
+    padding: 0.7rem 3rem;
+    margin: 2.5rem 0;
+    text-align: center;
+    -webkit-transition: all 700ms ease-in-out; /* Safari */
+    -moz-transition: all 700ms ease-in-out; /* Firefox */
+    -o-transition: all 700ms ease-in-out; /* Opera */
+    transition: all 700ms ease-in-out;
+    cursor: default;
+}
+
+.massage-title:hover {
+    color: var(--beige);
+    background-color: var(--brown);
+    -webkit-transition: all 700ms ease-in-out; /* Safari */
+    -moz-transition: all 700ms ease-in-out; /* Firefox */
+    -o-transition: all 700ms ease-in-out; /* Opera */
+    transition: all 700ms ease-in-out;
+}
+
+/*BG*/
+.back-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(246, 198, 146, 0.7);
+    z-index: 2;
+}
+
+.back-img,
+#landing {
+    background-image: url("../assets/bg.jpg");
+    background-size: cover;
+    background-position: 0, 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.inactive,
+.inactive:hover {
+    background: var(--brown) !important;
+    color: var(--white) !important;
+    cursor: default !important;
+    opacity: 0.6 !important;
+}
+
+/* EFFECTS */
+.fadeInLeft {
+    animation: fadeInLeft ease-in-out 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+}
+
+.fadeInRight {
+    animation: fadeInRight ease-in-out 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-25px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(25px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+    }
+}
+
 /* MINWIDTH OPTIMALIZATION */
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1680px) and (min-height: 952px) {
     html {
         font-size: 26px;
     }
 }
-
 /* MAXWIDTH OPTIMALIZATION */
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     html {
         font-size: 14px;
+    }
+    .back-img,
+    #landing {
+        background-image: url("../assets/sm-bg.jpg");
     }
 }

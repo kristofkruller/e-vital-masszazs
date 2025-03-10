@@ -1,149 +1,240 @@
-.sub-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #F6C592;
-    border-bottom: 1px solid black;
-    z-index: 10;
-}
-
-.logo {
-    background-image: url("../assets/evim-logo-cir.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 0% 50%;
-    width: 70px;
-    height: 70px;
-    margin-left: 1rem;
-    transition: var(--defaultTransition);
-}
-
-.logo:hover {
-    width: 100px;
-    height: 100px;
-    transition: var(--defaultTransition);
-}
-
-.sub-header-left {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.sub-header-left > div {
-    font-family: var(--decorativeFont);
-}
-
-.toggle-button {
-    margin-right: 1rem;
-}
-
-.bar {
-    width: 50px;
-    height: 2px;
-    background-color: #44220D;
-    margin: 10px;
-    /*box-shadow: 0px 0px 8px hsla(23, 68%, 16%, 0.7);*/
-}
-
-.price {
-    position: absolute;
+.prices {
+    position: relative;
     width: 100vw;
-    height: auto;
-    background-color: #F6C592;
+    background-color: var(--beige);
+    padding: 2rem 1rem;
 }
 
 .back-img {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("../assets/pexels-anntarazevich-6560304.jpg");
-    background-size: cover;
-    background-position: 0,0;
     opacity: 0.15;
-    z-index: 1;
 }
 
-#wrapper {
-    padding-top: 80px;
-}
-
-.prices-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
-
-.prices-content > table {
+.prices-content h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1rem;
+    padding: .5rem;
+    border-top: solid 1px var(--brown);
+    border-bottom: solid 1px var(--brown);
+    font-weight: bold;
+    font-size: 0.8rem;
 }
-
-/* .prices-content > p {
-    color: #44220D;
-    background-color: #F6C592;
-    width: 84vw;
-    font-size: 2rem;
-    font-weight: 800;
-    padding: 1rem;
-    margin: 2.5rem 0;
-} */
-
-.massage-title {
-    color: #44220D;
-    background-color: #F6C592;
+.prices-content .fa-info-circle {
     font-size: 1rem;
-    min-width: 65vw;
-    font-style: var(--decorativeFont);
-    font-weight: 700;
-    padding: 1rem 3rem;
-    margin: 2.5rem 0;
-    text-align: center;
-    border-radius: 80px;
-    border: 1px solid black;
-    transition: var(--defaultTransition);
+    margin-right: .5rem;
+}
+.prices-content,
+.content-block {
+    position: relative;
+    z-index: 2;
+    display: -webkit-box; /* Old iOS Safari */
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE 10 */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column; /* Old iOS Safari */
+    -ms-flex-direction: column; /* IE 10 */
+    flex-direction: column;
+    -webkit-box-align: center; /* Old iOS Safari */
+    -ms-flex-align: center; /* IE 10 */
+    align-items: center;
+    width: 100%;
 }
 
-.massage-title:hover {
-    color: #F6C592;
-    background-color: #44220D;
-    transition: var(--defaultTransition);
+.content-block {
+    padding-bottom: 1rem;
 }
 
-.prices-content th {
-    font-size: 1.5rem;
+.prices-content:last-of-type {
+    margin-top: 4rem;
 }
 
-.prices-content td {
-    padding: 0.5rem;
+.prices-header,
+.price-item {
+    display: -webkit-box; /* Old iOS Safari */
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE 10 */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify; /* Old iOS Safari */
+    -ms-flex-pack: justify; /* IE 10 */
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1024px;
+    padding: 0.5rem 0;
 }
 
-.prices-content tr th:nth-child(1), .prices-content tr th:nth-child(2), .prices-content tr td:nth-child(1), .prices-content tr td:nth-child(2) {
-    width: 30vw;
-    word-wrap: break-word;
+.prices-header {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    margin-bottom: 1rem;
 }
 
-.prices-content tr th:nth-child(3), .prices-content tr th:nth-child(4), .prices-content tr td:nth-child(3), .prices-content tr td:nth-child(4) {
-    text-align: center;
-    min-width: 12vw;
-    text-wrap: nowrap;
-}
-
-.prices-content tr {
+.prices-header-item {
     font-size: 1.2rem;
-    height: 3rem;
-    font-weight: 600;
+    -webkit-box-flex: 1; /* Old iOS Safari */
+    -moz-box-flex: 1; /* Firefox */
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: start;
+    cursor: default;
 }
 
-.d1 {
+.prices-header-item:nth-child(2) {
+    text-align: end;
+}
+
+.price-description {
+    display: -webkit-box; /* Old iOS Safari */
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE 10 */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center; /* Old iOS Safari */
+    -ms-flex-align: center; /* IE 10 */
+    align-items: center;
+    -webkit-box-flex: 1; /* Old iOS Safari */
+    -moz-box-flex: 1; /* Firefox */
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 70%;
+}
+
+.price-description * {
+    line-height: 1;
+}
+
+.price-description span {
+    font-weight: bold;
+}
+
+.price-value {
+    font-weight: bold;
+    text-align: right;
+    cursor: default;
+}
+
+.price-item:nth-of-type(even) {
     background-color: #f6c692b3;
+}
+
+.price-item {
+    padding: 0.5rem;
+    /* init animation */
+    opacity: 0;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.price-item p {
+    font-size: 0.7rem;
+    opacity: 0.75;
+    margin-left: 0.5rem;
+}
+
+.fa-info {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 15px;
+    /* background: linear-gradient(to right bottom, var(--beige), var(--brown)); */
+    background: var(--brown);
+    box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem #4048bf4d;
+    min-height: min-content;
+    padding-top: 1rem;
+    overflow: hidden;
+    z-index: 2;
+    opacity: 0.9;
+}
+
+.popup-content {
+    font-size: 0.65rem;
+    color: var(--white);
+    cursor: default;
+}
+
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: -webkit-box; /* Old iOS Safari */
+    display: -moz-box; /* Firefox */
+    display: -ms-flexbox; /* IE 10 */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center; /* Old iOS Safari */
+    -ms-flex-pack: center; /* IE 10 */
+    justify-content: center;
+    -webkit-box-align: center; /* Old iOS Safari */
+    -ms-flex-align: center; /* IE 10 */
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #f3f3f366;
+    border-radius: 100rem;
+    color: inherit;
+    font-size: 1rem;
+    -webkit-transition: var(--defaultTransition); /* Safari */
+    -moz-transition: var(--defaultTransition); /* Firefox */
+    -o-transition: var(--defaultTransition); /* Opera */
+    transition: var(--defaultTransition);
+}
+.popup-close::before {
+    content: "×";
+    color: var(--white);
+    -webkit-transform: translateY(-0.1rem);
+    transform: translateY(-0.1rem);
+}
+.popup:hover .popup-close::before {
+    -webkit-transform: translateY(-0.1rem) scale(1.2);
+    transform: translateY(-0.1rem) scale(1.2);
+    -webkit-transition: var(--defaultTransition); /* Safari */
+    -moz-transition: var(--defaultTransition); /* Firefox */
+    -o-transition: var(--defaultTransition); /* Opera */
+    transition: var(--defaultTransition);
+    cursor: pointer;
+}
+.massage-title:first-of-type {
+    margin-top: 1.25rem
+}
+@media screen and (min-width: 1024px) {
+    .prices-content {
+        font-size: 0.8rem;
+    }
+    .massage-title {
+        margin: 0.1rem 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .prices-header-item,
+    .price-value {
+        width: 100%;
+        align-content: center;
+    }
+    .prices-content .fa-info-circle {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
 }
