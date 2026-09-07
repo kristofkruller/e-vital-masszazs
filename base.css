@@ -250,6 +250,9 @@ p {
     html {
         font-size: 26px;
     }
+    .contact > i.fa-envelope {
+        margin-right: 10px;
+    }
 }
 /* MAXWIDTH OPTIMALIZATION */
 @media screen and (max-width: 768px) {
